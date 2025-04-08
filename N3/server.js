@@ -1,4 +1,3 @@
-// 1. Inicialize seu projeto Node (fora do código):
 // npm init -y
 // npm install express ejs sqlite3 body-parser
 const express = require('express');
