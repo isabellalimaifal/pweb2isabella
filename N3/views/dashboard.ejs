@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - PetMax - Clínica Veterinária</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1 class="titulo-dashboard">Olá, <%= cliente.nome %>!</h1>
+
+  <h2 class="subtitulo">Seus pets cadastrados:</h2>
+  <div class="lista-pets">
+    <% pets.forEach(pet => { %>
+      <div class="card-pet">
+        <h3 class="nome-pet"><%= pet.nome %></h3>
+        <p><strong>Espécie:</strong> <%= pet.especie %></p>
+        <p><strong>Raça:</strong> <%= pet.raca %></p>
+        <p><strong>Data de nascimento:</strong> <%= pet.data_nasc %></p>
+        <p><strong>Observações:</strong> <%= pet.observacoes %></p>
+        <form action="/pet/delete/<%= pet.id %>" method="POST">
+          <input type="hidden" name="cliente_id" value="<%= cliente.id %>">
+          <button type="submit">Remover</button>
+        </form>
+      </div>
+    <% }) %>
+  </div>
+
+  <div class="form-container">
+    <h2 class="titulo-form">Cadastrar novo pet</h2>
+    <form action="/pet/add" method="POST">
+      <input type="text" name="nome" placeholder="Nome do pet" required>
+      <input type="text" name="especie" placeholder="Espécie" required>
+      <input type="text" name="raca" placeholder="Raça" required>
+      <input type="date" name="data_nasc" required>
+      <input type="text" name="observacoes" placeholder="Observações">
+      <input type="hidden" name="cliente_id" value="<%= cliente.id %>">
+      <input type="submit" value="Adicionar Pet">
+    </form>
+  </div>
+</body>
+</html>
