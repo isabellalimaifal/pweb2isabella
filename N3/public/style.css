@@ -1,0 +1,123 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    background-color: #cdeffd;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .menu a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #34699a;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #a0d2eb;
+    color: #ffffff;
+  }
+  
+  header {
+    background-color: #cdeffd;
+    padding: 25px;
+    border-bottom: 3px solid #a0d2eb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  footer {
+    background-color: #cdeffd;
+    padding: 15px;
+    border-top: 3px solid #a0d2eb;
+    margin-top: 30px;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    border: 2px dashed #a0d2eb;
+  }
+  
+  input, button, select, textarea {
+    margin-bottom: 12px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f9fb;
+  }
+  
+  button {
+    background-color: #6ea8d6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #34699a;
+  }
+  
+  .container {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .galeria-imagens {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .galeria-imagens img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #a0d2eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria-imagens img:hover {
+    transform: scale(1.05);
+    border-color: #6ea8d6;
+  }
+  
+  .titulo-centralizado {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 26px;
+    color: #34699a;
+  }
+  
